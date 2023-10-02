@@ -4,7 +4,7 @@ export const Sidebar = () =>{
     return(
         <div className={s.Sidebar}>
             <div className={s.blockLink}>
-                <Link href={'#'}>hot_libraries</Link>
+                <Link href={`/Page/library/`}>hot_libraries</Link>
                 <Link href={'#'}>Example</Link>
                 <Link href={'#'}>Link</Link>
                 <Link href={'#'}>test1</Link>
