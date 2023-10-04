@@ -1,15 +1,8 @@
-import s from "@/components/pages/home/home.module.css";
-import {Header, HomeContent, Sidebar} from "@/components/widgets";
 import {SignIn} from "@/components/widgets/sign-in";
+import {HomePage} from "@/components";
 
 export default function signIn(){
     return(
-        <div className={s.homeWrapper}>
-            <Header/>
-            <div className={s.contentWrapper}>
-                <Sidebar />
-                <SignIn />
-            </div>
-        </div>
+        <HomePage><SignIn /></HomePage>
     )
 }

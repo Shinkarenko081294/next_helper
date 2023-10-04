@@ -19,7 +19,9 @@ export async function checkToken(accessToken: RequestCookie | undefined): Promis
         }else{
             console.log('DEAD-TOKEN')
             const id = parsingToken(accessToken.value)
+            console.log(id)
             const refreshToken = id ? await getRefreshToken(id) : null
+            console.log(refreshToken)
             const newData = refreshTokens(refreshToken)
             return {...newData}
         }

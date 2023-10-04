@@ -9,7 +9,7 @@ export const Header = () =>{
                 Helper
             </div>
             <div className="btnPanel">
-                <Link href={''} >LogIn</Link>
+                <Link href={'/Page/user/signIn'} >LogIn</Link>
                 |
                 <Link href={''} >LogOut</Link>
             </div>

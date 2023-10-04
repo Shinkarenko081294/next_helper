@@ -1,8 +1,11 @@
-import {HomePage} from "@/components";
+import { HomeContent, HomePage } from "@/components";
 
 
-export default function Home() {
+
+export default async function Home() {
   return (
-    <HomePage />
-  )
+      <HomePage>
+        <HomeContent />
+      </HomePage>
+  );
 }
