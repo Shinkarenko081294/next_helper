@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.5.3",
     "next": "latest",
     "react": "latest",
@@ -16,7 +18,10 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/node": "latest",
+    "@types/node-fetch": "^2.6.6",
     "@types/react": "latest",
     "@types/react-dom": "latest",
     "typescript": "latest"
