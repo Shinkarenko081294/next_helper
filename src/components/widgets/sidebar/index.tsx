@@ -1,5 +1,5 @@
-import Link from "next/link";
 import s from './sideBar.module.css'
+import Link from "next/link";
 export const Sidebar = () =>{
     return(
         <div className={s.Sidebar}>
