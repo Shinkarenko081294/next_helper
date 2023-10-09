@@ -1,9 +1,9 @@
 import {Header, HomeContent, Sidebar} from "@/components/widgets";
 import s from './home.module.css'
-import {FC} from "react";
+import {FC, ReactNode} from "react";
 
 type PropsType = {
-    children: React.ReactNode
+    children: ReactNode;
 }
 export const HomePage:FC<PropsType> = ({children}) =>{
     return(
