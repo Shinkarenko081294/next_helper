@@ -1,16 +1,30 @@
 'use client'
 import {getUserData} from "@/app/api/api-query/getUserData";
 import useSWR from "swr";
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import useAuthStore from "@/app/store/authStore/authStore";
+import { useRouter } from 'next/navigation'
+
+
 
 export const HomeContent = () =>{
-    const {toggleUser,toggleInitial,user} = useAuthStore()
+    const {toggleUser,toggleInitial,user,initialization} = useAuthStore()
     const { data, isLoading, error } = useSWR("/api", getUserData);
+    const router = useRouter();
     useEffect(() => {
+        if (!initialization) {
+            router.push('/Page/user/signUp');
+        }
+    }, [initialization]);
+    useEffect(() => {
+        console.log(data)
         if(data != undefined){
-            toggleUser(data)
-            toggleInitial(true)
+            if(data.error){
+                toggleInitial(false)
+            }else {
+                toggleUser(data)
+                toggleInitial(true)
+            }
         }
     }, [data]);
 
